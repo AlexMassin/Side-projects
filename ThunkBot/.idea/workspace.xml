@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="817568cd-a39b-47f0-8f31-cb2d2386d3ca" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/my/awesome/discordbot/ThunkBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/awesome/discordbot/ThunkBot.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -16,27 +15,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ThunkBot.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ThunkBot.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/my/awesome/discordbot/ThunkBot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="39" lean-forward="true" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+            <state relative-caret-position="263">
+              <caret line="51" column="17" lean-forward="true" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1358#7573#0" expanded="true" />
-                <element signature="e#7572#7573#0" expanded="true" />
-                <element signature="e#7275#7915#0" expanded="true" />
-                <element signature="e#7914#7915#0" expanded="true" />
+                <element signature="e#1366#7565#0" expanded="true" />
+                <element signature="e#7564#7565#0" expanded="true" />
+                <element signature="e#7598#8238#0" expanded="true" />
+                <element signature="e#8237#8238#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="input1.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/input1.txt">
+      <file leaf-file-name="output.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/output.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="59" selection-start-column="59" selection-end-column="59" />
+              <caret selection-end-line="1" selection-end-column="243" />
             </state>
           </provider>
         </entry>
@@ -59,6 +58,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/my/awesome/discordbot/RageBot.java" />
         <option value="$PROJECT_DIR$/input1.txt" />
+        <option value="$PROJECT_DIR$/output.txt" />
         <option value="$PROJECT_DIR$/src/main/java/my/awesome/discordbot/ThunkBot.java" />
       </list>
     </option>
@@ -76,7 +76,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="39" />
     <option name="y" value="-15" />
     <option name="width" value="1698" />
@@ -88,8 +88,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -246,6 +246,7 @@
       <workItem from="1524419284471" duration="1544000" />
       <workItem from="1524420874560" duration="1558000" />
       <workItem from="1524423438010" duration="980000" />
+      <workItem from="1524424952958" duration="2604000" />
     </task>
     <task id="LOCAL-00001" summary="Added help functionality and fixed bug with -whois">
       <created>1524421777313</created>
@@ -265,10 +266,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25213000" />
+    <option name="totallyTimeSpent" value="27817000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="bottom" id="TODO" order="12" />
@@ -280,11 +282,11 @@
       <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.32943678" />
-      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.49881095" weight="0.33156216" />
+      <window_info active="true" anchor="bottom" id="Run" order="7" sideWeight="0.49881095" visible="true" weight="0.33156216" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Designer" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.18020834" />
+      <window_info content_ui="combo" id="Project" order="5" weight="0.18020834" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Learn" order="0" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
@@ -301,6 +303,38 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection Results" order="8" weight="0.32943678" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Designer" order="1" />
+      <window_info anchor="right" id="Palette" order="5" />
+      <window_info active="true" anchor="bottom" id="Run" order="7" sideWeight="0.49881095" visible="true" weight="0.33156216" />
+      <window_info id="Image Layers" order="6" />
+      <window_info anchor="bottom" id="Find" order="6" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="0" />
+      <window_info anchor="bottom" id="Inspection Results" order="8" weight="0.32943678" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50118905" side_tool="true" weight="0.33049947" />
+      <window_info anchor="bottom" id="Messages" order="4" weight="0.32731137" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="3" weight="0.32943678" />
+      <window_info anchor="right" id="Maven Projects" order="4" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.18020834" />
+      <window_info id="Learn" order="0" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="TODO" order="12" />
+      <window_info anchor="right" id="Palette&#9;" order="1" />
+      <window_info anchor="right" id="Theme Preview" order="2" />
+      <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.39744952" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -330,7 +364,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/my/awesome/discordbot/ThunkBot.java</url>
-          <line>139</line>
+          <line>161</line>
           <properties />
           <option name="timeStamp" value="13" />
         </line-breakpoint>
@@ -341,14 +375,35 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/my/awesome/discordbot/ThunkBot.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="39" lean-forward="true" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1366#7565#0" expanded="true" />
+            <element signature="e#7564#7565#0" expanded="true" />
+            <element signature="e#7598#8238#0" expanded="true" />
+            <element signature="e#8237#8238#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="59" selection-start-column="59" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/my/awesome/discordbot/ThunkBot.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="29" column="68" lean-forward="true" selection-start-line="29" selection-start-column="68" selection-end-line="29" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1358#7573#0" expanded="true" />
-            <element signature="e#7572#7573#0" expanded="true" />
-            <element signature="e#7275#7915#0" expanded="true" />
-            <element signature="e#7914#7915#0" expanded="true" />
+            <element signature="e#1366#7565#0" expanded="true" />
+            <element signature="e#7564#7565#0" expanded="true" />
+            <element signature="e#7598#8238#0" expanded="true" />
+            <element signature="e#8237#8238#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -366,10 +421,10 @@
           <caret line="142" selection-start-line="142" selection-end-line="142" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1358#7573#0" expanded="true" />
-            <element signature="e#7572#7573#0" expanded="true" />
-            <element signature="e#7275#7915#0" expanded="true" />
-            <element signature="e#7914#7915#0" expanded="true" />
+            <element signature="e#1366#7565#0" expanded="true" />
+            <element signature="e#7564#7565#0" expanded="true" />
+            <element signature="e#7598#8238#0" expanded="true" />
+            <element signature="e#8237#8238#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -380,10 +435,10 @@
           <caret line="114" selection-start-line="114" selection-end-line="114" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1358#7573#0" expanded="true" />
-            <element signature="e#7572#7573#0" expanded="true" />
-            <element signature="e#7275#7915#0" expanded="true" />
-            <element signature="e#7914#7915#0" expanded="true" />
+            <element signature="e#1366#7565#0" expanded="true" />
+            <element signature="e#7564#7565#0" expanded="true" />
+            <element signature="e#7598#8238#0" expanded="true" />
+            <element signature="e#8237#8238#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -401,10 +456,10 @@
           <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1358#7573#0" expanded="true" />
-            <element signature="e#7572#7573#0" expanded="true" />
-            <element signature="e#7275#7915#0" expanded="true" />
-            <element signature="e#7914#7915#0" expanded="true" />
+            <element signature="e#1366#7565#0" expanded="true" />
+            <element signature="e#7564#7565#0" expanded="true" />
+            <element signature="e#7598#8238#0" expanded="true" />
+            <element signature="e#8237#8238#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -422,10 +477,10 @@
           <caret line="39" column="67" lean-forward="true" selection-start-line="39" selection-start-column="67" selection-end-line="39" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1358#7573#0" expanded="true" />
-            <element signature="e#7572#7573#0" expanded="true" />
-            <element signature="e#7275#7915#0" expanded="true" />
-            <element signature="e#7914#7915#0" expanded="true" />
+            <element signature="e#1366#7565#0" expanded="true" />
+            <element signature="e#7564#7565#0" expanded="true" />
+            <element signature="e#7598#8238#0" expanded="true" />
+            <element signature="e#8237#8238#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -443,10 +498,10 @@
           <caret line="76" column="29" lean-forward="true" selection-start-line="76" selection-start-column="29" selection-end-line="76" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1358#7573#0" expanded="true" />
-            <element signature="e#7572#7573#0" expanded="true" />
-            <element signature="e#7275#7915#0" expanded="true" />
-            <element signature="e#7914#7915#0" expanded="true" />
+            <element signature="e#1366#7565#0" expanded="true" />
+            <element signature="e#7564#7565#0" expanded="true" />
+            <element signature="e#7598#8238#0" expanded="true" />
+            <element signature="e#8237#8238#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -655,20 +710,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/output.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/my/awesome/discordbot/ThunkBot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="39" lean-forward="true" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+        <state relative-caret-position="263">
+          <caret line="51" column="17" lean-forward="true" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1358#7573#0" expanded="true" />
-            <element signature="e#7572#7573#0" expanded="true" />
-            <element signature="e#7275#7915#0" expanded="true" />
-            <element signature="e#7914#7915#0" expanded="true" />
+            <element signature="e#1366#7565#0" expanded="true" />
+            <element signature="e#7564#7565#0" expanded="true" />
+            <element signature="e#7598#8238#0" expanded="true" />
+            <element signature="e#8237#8238#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="1" selection-end-column="243" />
         </state>
       </provider>
     </entry>

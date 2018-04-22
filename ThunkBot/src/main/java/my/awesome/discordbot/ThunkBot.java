@@ -27,6 +27,9 @@ import java.util.TimeZone;
 public class ThunkBot {
     private static boolean annoy = false;
     private static String prefix = "-";
+    public static PrintWriter pw;
+    private static boolean collect = false;
+    private static File output = new File("output.txt");
 
 
     public static void main(String[] args) throws FileNotFoundException{
@@ -35,8 +38,21 @@ public class ThunkBot {
         api.connectBlocking();
 
         api.setGame("Type " + prefix + " help for commands");
+
+
         api.registerListener(new MessageCreateListener() {
             public void onMessageCreate(DiscordAPI discordAPI, Message message) {
+                if(message.getContent().equalsIgnoreCase(prefix + "startCollection")){
+                    try {
+                        message.reply("Collecting...");
+                        pw = new PrintWriter(output);
+                        collect = true;
+                    } catch (FileNotFoundException e) { e.printStackTrace(); }
+
+                }
+                if(collect && message.getAttachments().size() != 0)
+                    pw.println(message.getChannelReceiver() + ":     User: " +message.getAuthor() + " Attachments:  "  + message.getAttachments());
+
 
                 if (!message.getAuthor().isBot()) {
                     if (message.getContent().equalsIgnoreCase(prefix + "ping")) {
@@ -122,6 +138,12 @@ public class ThunkBot {
                         }
 
 
+                    }
+
+
+                    if(message.getContent().equals(prefix + "stopCollection")){
+                        message.reply("Stopping Collection...");
+                        pw.close();
                     }
 
 
