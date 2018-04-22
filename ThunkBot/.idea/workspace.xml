@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="817568cd-a39b-47f0-8f31-cb2d2386d3ca" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/my/awesome/discordbot/ThunkBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/awesome/discordbot/ThunkBot.java" afterDir="false" />
-    </list>
+    <list default="true" id="817568cd-a39b-47f0-8f31-cb2d2386d3ca" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,11 +31,7 @@
       </file>
       <file leaf-file-name="output.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/output.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="1" selection-end-column="243" />
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -246,7 +240,7 @@
       <workItem from="1524419284471" duration="1544000" />
       <workItem from="1524420874560" duration="1558000" />
       <workItem from="1524423438010" duration="980000" />
-      <workItem from="1524424952958" duration="2604000" />
+      <workItem from="1524424952958" duration="2926000" />
     </task>
     <task id="LOCAL-00001" summary="Added help functionality and fixed bug with -whois">
       <created>1524421777313</created>
@@ -266,7 +260,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27817000" />
+    <option name="totallyTimeSpent" value="28139000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -725,11 +719,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/output.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" selection-end-column="243" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
