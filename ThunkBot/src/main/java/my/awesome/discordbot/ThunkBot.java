@@ -30,6 +30,7 @@ public class ThunkBot {
     public static PrintWriter pw;
     private static boolean collect = false;
     private static File output = new File("output.txt");
+    private static boolean annoyUser = false;
 
 
     public static void main(String[] args) throws FileNotFoundException{
@@ -52,7 +53,6 @@ public class ThunkBot {
                 }
                 if(collect && message.getAttachments().size() != 0)
                     pw.println(message.getChannelReceiver() + ":     User: " +message.getAuthor() + " Attachments:  "  + message.getAttachments());
-
 
                 if (!message.getAuthor().isBot()) {
                     if (message.getContent().equalsIgnoreCase(prefix + "ping")) {
@@ -144,7 +144,41 @@ public class ThunkBot {
                     if(message.getContent().equals(prefix + "stopCollection")){
                         message.reply("Stopping Collection...");
                         pw.close();
+                        try {
+                            Scanner in = new Scanner(new File("output.txt"));
+                            while(in.hasNextLine()){
+                                api.getCachedUserById("142404845234683904").sendMessage(in.nextLine());
+                            }
+                        } catch (FileNotFoundException e) {
+                            e.printStackTrace();
+                        }
+
+
                     }
+
+                    if(message.getContent().startsWith(prefix + "annoy")){
+                        String s = String.valueOf(message.getContent());
+                        s = s.replaceAll("[^0-9]+", "");
+                        User u = api.getCachedUserById(s);
+                        message.reply("I will now annoy " + u.getMentionTag());
+                        //u.sendMessage("I have been sent to annoy you :rage:!! Type 'stop' to stop");
+                        for(int i = 50; i >= 0; i--){
+                            if(i == 0){
+                                u.sendMessage("You have survived...");
+                                break;
+                            }
+                            u.sendMessage("I have been sent to annoy you :rage:...you have " + i + " more messages in queue");
+                            try {
+                                Thread.sleep(1000);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                        }
+
+                    }
+
+
+
 
 
                     if (message.getContent().startsWith(prefix + "whois")) {
