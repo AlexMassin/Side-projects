@@ -15,6 +15,8 @@ import de.btobastian.javacord.listener.message.TypingStartListener;
 import java.awt.*;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintStream;
+import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Random;
@@ -34,8 +36,8 @@ public class ThunkBot {
 
         api.setGame("Type " + prefix + " help for commands");
         api.registerListener(new MessageCreateListener() {
-
             public void onMessageCreate(DiscordAPI discordAPI, Message message) {
+
                 if (!message.getAuthor().isBot()) {
                     if (message.getContent().equalsIgnoreCase(prefix + "ping")) {
                         message.reply(message.getAuthor().getMentionTag() + " Pong! :ping_pong:");
