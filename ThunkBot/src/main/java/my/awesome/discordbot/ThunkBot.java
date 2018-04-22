@@ -1,8 +1,9 @@
 package my.awesome.discordbot;
 
-import de.btobastian.javacord.*;
+import de.btobastian.javacord.DiscordAPI;
+import de.btobastian.javacord.ImplDiscordAPI;
+import de.btobastian.javacord.Javacord;
 import de.btobastian.javacord.entities.Channel;
-import de.btobastian.javacord.entities.Server;
 import de.btobastian.javacord.entities.User;
 import de.btobastian.javacord.entities.message.Message;
 import de.btobastian.javacord.entities.message.MessageHistory;
@@ -11,12 +12,14 @@ import de.btobastian.javacord.entities.message.impl.ImplMessageHistory;
 import de.btobastian.javacord.listener.message.MessageCreateListener;
 import de.btobastian.javacord.listener.message.TypingStartListener;
 
-
 import java.awt.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.Scanner;
+import java.util.TimeZone;
 
 
 public class ThunkBot {
@@ -69,7 +72,10 @@ public class ThunkBot {
                         String s = String.valueOf(message.getContent());
                         s = s.replaceAll("[^0-9]+", "");
                         User u = api.getCachedUserById(s);
-                        message.reply(String.valueOf(u.getAvatarUrl()));
+                        EmbedBuilder e = new EmbedBuilder();
+                        e.setImage(String.valueOf(u.getAvatarUrl()));
+                        e.setColor(Color.RED);
+                        message.reply("", e);
                     }
 
                     if (message.getContent().equalsIgnoreCase(prefix + "annoyOn")) {
