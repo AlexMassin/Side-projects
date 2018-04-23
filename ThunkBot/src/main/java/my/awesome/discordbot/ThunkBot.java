@@ -18,10 +18,7 @@ import java.io.FileNotFoundException;
 import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Random;
-import java.util.Scanner;
-import java.util.TimeZone;
+import java.util.*;
 
 
 public class ThunkBot {
@@ -30,7 +27,9 @@ public class ThunkBot {
     public static PrintWriter pw;
     private static boolean collect = false;
     private static File output = new File("output.txt");
-    private static boolean annoyUser = false;
+    private static String ownerID = "142404845234683904";
+    private static String channelAnnoy;
+
 
 
     public static void main(String[] args) throws FileNotFoundException{
@@ -51,13 +50,17 @@ public class ThunkBot {
                     } catch (FileNotFoundException e) { e.printStackTrace(); }
 
                 }
+
                 if(collect && message.getAttachments().size() != 0)
                     pw.println(message.getChannelReceiver() + ":     User: " +message.getAuthor() + " Attachments:  "  + message.getAttachments());
 
                 if (!message.getAuthor().isBot()) {
                     if (message.getContent().equalsIgnoreCase(prefix + "ping")) {
-                        message.reply(message.getAuthor().getMentionTag() + " Pong! :ping_pong:");
-                        System.out.println(api.getUsers());
+                        Calendar date = Calendar.getInstance();
+                        long m2 = date.getTimeInMillis();
+                        long m1 = message.getCreationDate().getTimeInMillis();
+
+                        message.reply(message.getAuthor().getMentionTag() + " Pong! :ping_pong: " + Long.toString(m1-m2) + "ms");
                     }
 
                     if (message.getContent().startsWith(prefix + "prefix")) {
@@ -98,6 +101,7 @@ public class ThunkBot {
 
                     if (message.getContent().equalsIgnoreCase(prefix + "annoyOn")) {
                         message.reply("Annoy Mode On!");
+                        channelAnnoy = message.getChannelReceiver().getId();
                         annoy = true;
                     }
 
@@ -147,7 +151,7 @@ public class ThunkBot {
                         try {
                             Scanner in = new Scanner(new File("output.txt"));
                             while(in.hasNextLine()){
-                                api.getCachedUserById("142404845234683904").sendMessage(in.nextLine());
+                                api.getCachedUserById(ownerID).sendMessage(in.nextLine());
                             }
                         } catch (FileNotFoundException e) {
                             e.printStackTrace();
@@ -156,7 +160,7 @@ public class ThunkBot {
 
                     }
 
-                    if(message.getContent().startsWith(prefix + "annoy")){
+                    if(message.getContent().startsWith(prefix + "curse")){
                         String s = String.valueOf(message.getContent());
                         s = s.replaceAll("[^0-9]+", "");
                         User u = api.getCachedUserById(s);
@@ -179,6 +183,9 @@ public class ThunkBot {
 
 
 
+                    if(message.isPrivateMessage()){
+                        api.getCachedUserById(ownerID).sendMessage(message.toString() + " " + message.getAttachments());
+                    }
 
 
                     if (message.getContent().startsWith(prefix + "whois")) {
@@ -204,7 +211,7 @@ public class ThunkBot {
                         e.addField("Discriminator: ", "#" + u.getDiscriminator(), true);
                         e.addField("Creation Date: ", format1.format(u.getCreationDate().getTime()) + " EST ", true);
                         e.addField("ID: ", u.getId(), true);
-
+                        e.addField("Playing: ", u.getGame(), true);
                         e.setThumbnail(String.valueOf(u.getAvatarUrl()));
 
                         message.reply("", e);
@@ -223,7 +230,7 @@ public class ThunkBot {
                         "I bet you have 1.66 GPA cuz your liberal brought you down :joy:",
                         "Take care of your girl before an African does :eggplant: :joy: :cry:"};
 
-                if(annoy && !channel.getName().equals("general"))
+                if(annoy && channel.getId().equals(channelAnnoy))
                     channel.sendMessage(user.getMentionTag() + " " +  s[rand.nextInt(4)]);
             }
         });

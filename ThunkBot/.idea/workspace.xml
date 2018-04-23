@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="817568cd-a39b-47f0-8f31-cb2d2386d3ca" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/my/awesome/discordbot/ThunkBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/my/awesome/discordbot/ThunkBot.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,8 +18,8 @@
       <file leaf-file-name="ThunkBot.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/my/awesome/discordbot/ThunkBot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+            <state relative-caret-position="323">
+              <caret line="127" column="76" selection-start-line="127" selection-end-line="128" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1541#9944#0" expanded="true" />
@@ -35,8 +34,8 @@
       <file leaf-file-name="input1.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/input1.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="59" selection-start-column="59" selection-end-column="59" />
+            <state relative-caret-position="51">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -67,8 +66,8 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/my/awesome/discordbot/RageBot.java" />
-        <option value="$PROJECT_DIR$/input1.txt" />
         <option value="$PROJECT_DIR$/output.txt" />
+        <option value="$PROJECT_DIR$/input1.txt" />
         <option value="$PROJECT_DIR$/src/main/java/my/awesome/discordbot/ThunkBot.java" />
       </list>
     </option>
@@ -257,7 +256,7 @@
       <workItem from="1524420874560" duration="1558000" />
       <workItem from="1524423438010" duration="980000" />
       <workItem from="1524424952958" duration="3770000" />
-      <workItem from="1524431479583" duration="6357000" />
+      <workItem from="1524431479583" duration="11374000" />
     </task>
     <task id="LOCAL-00001" summary="Added help functionality and fixed bug with -whois">
       <created>1524421777313</created>
@@ -277,23 +276,23 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35340000" />
+    <option name="totallyTimeSpent" value="40357000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="bottom" id="TODO" order="12" />
-      <window_info anchor="bottom" id="Messages" order="4" weight="0.32731137" />
+      <window_info anchor="bottom" id="Messages" order="4" sideWeight="0.49947917" weight="0.32731137" />
       <window_info anchor="right" id="Palette&#9;" order="1" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50118905" side_tool="true" weight="0.33049947" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5015625" side_tool="true" weight="0.33156216" />
       <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.32943678" />
-      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.49881095" weight="0.33156216" />
+      <window_info active="true" anchor="bottom" id="Run" order="7" sideWeight="0.4984375" visible="true" weight="0.33156216" />
       <window_info anchor="bottom" id="Terminal" order="1" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Designer" order="1" />
@@ -317,7 +316,7 @@
     <layout-to-restore>
       <window_info id="Designer" order="1" />
       <window_info anchor="right" id="Palette" order="5" />
-      <window_info active="true" anchor="bottom" id="Run" order="7" sideWeight="0.49881095" visible="true" weight="0.33156216" />
+      <window_info active="true" anchor="bottom" id="Run" order="7" sideWeight="0.4984375" visible="true" weight="0.33156216" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Find" order="6" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
@@ -329,8 +328,8 @@
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="bottom" id="Inspection Results" order="8" weight="0.32943678" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50118905" side_tool="true" weight="0.33049947" />
-      <window_info anchor="bottom" id="Messages" order="4" weight="0.32731137" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5015625" side_tool="true" weight="0.33156216" />
+      <window_info anchor="bottom" id="Messages" order="4" sideWeight="0.49947917" weight="0.32731137" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.32943678" />
@@ -375,12 +374,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/my/awesome/discordbot/ThunkBot.java</url>
-          <line>147</line>
+          <line>185</line>
           <properties />
-          <option name="timeStamp" value="14" />
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="15" />
+      <option name="time" value="17" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -587,13 +586,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/de/btobastian/javacord/javacord/2.0.17/javacord-2.0.17.jar!/de/btobastian/javacord/entities/impl/ImplUser.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="200" selection-start-line="200" selection-end-line="200" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/de/btobastian/javacord/javacord/2.0.17/javacord-2.0.17.jar!/de/btobastian/javacord/entities/message/embed/EmbedBuilder.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -699,20 +691,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/de/btobastian/javacord/javacord/2.0.17/javacord-2.0.17.jar!/de/btobastian/javacord/utils/ThreadPool.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/de/btobastian/javacord/javacord/2.0.17/javacord-2.0.17.jar!/de/btobastian/javacord/ImplDiscordAPI.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="333" selection-start-line="333" selection-end-line="333" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/de/btobastian/javacord/javacord/2.0.17/javacord-2.0.17.jar!/de/btobastian/javacord/entities/impl/ImplChannel.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
@@ -721,32 +699,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/my/awesome/discordbot/RageBot.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/de/btobastian/javacord/javacord/2.0.17/javacord-2.0.17.jar!/de/btobastian/javacord/utils/handler/message/MessageCreateHandler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/de/btobastian/javacord/javacord/2.0.17/javacord-2.0.17.jar!/de/btobastian/javacord/entities/message/impl/ImplMessage.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="214" selection-start-line="214" selection-end-line="214" />
-          <folding>
-            <element signature="e#8599#8600#0" expanded="true" />
-            <element signature="e#14861#14862#0" expanded="true" />
-            <element signature="e#14918#14919#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="59" selection-start-column="59" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/output.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -754,10 +706,103 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/de/btobastian/javacord/javacord/2.0.17/javacord-2.0.17.jar!/de/btobastian/javacord/ImplDiscordAPI.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="333" selection-start-line="333" selection-end-line="333" />
+          <folding>
+            <element signature="e#11285#11286#0" expanded="true" />
+            <element signature="e#11332#11333#0" expanded="true" />
+            <element signature="e#13040#13041#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/de/btobastian/javacord/javacord/2.0.17/javacord-2.0.17.jar!/de/btobastian/javacord/utils/ThreadPool.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+          <folding>
+            <element signature="e#1290#1291#0" expanded="true" />
+            <element signature="e#1333#1334#0" expanded="true" />
+            <element signature="e#1971#1972#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/20.0/guava-20.0-sources.jar!/com/google/common/util/concurrent/TrustedListenableFutureTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="e#2593#2594#0" expanded="true" />
+            <element signature="e#2659#2660#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/20.0/guava-20.0-sources.jar!/com/google/common/util/concurrent/AbstractListeningExecutorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+          <folding>
+            <element signature="e#2466#2467#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/de/btobastian/javacord/javacord/2.0.17/javacord-2.0.17.jar!/de/btobastian/javacord/entities/impl/ImplUser.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="213" selection-start-line="213" selection-end-line="213" />
+          <folding>
+            <element signature="e#11066#12513#0" expanded="true" />
+            <element signature="e#12512#12513#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/20.0/guava-20.0-sources.jar!/com/google/common/util/concurrent/AbstractFuture.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/de/btobastian/javacord/javacord/2.0.17/javacord-2.0.17.jar!/de/btobastian/javacord/entities/message/impl/ImplMessage.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="234" selection-start-line="234" selection-end-line="234" />
+          <folding>
+            <element signature="e#8564#8565#0" expanded="true" />
+            <element signature="e#8599#8600#0" expanded="true" />
+            <element signature="e#9086#9087#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/de/btobastian/javacord/javacord/2.0.17/javacord-2.0.17.jar!/de/btobastian/javacord/utils/handler/message/MessageCreateHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+          <folding>
+            <element signature="e#1261#2066#0" expanded="true" />
+            <element signature="e#2065#2066#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/my/awesome/discordbot/ThunkBot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+        <state relative-caret-position="323">
+          <caret line="127" column="76" selection-start-line="127" selection-end-line="128" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1541#9944#0" expanded="true" />
