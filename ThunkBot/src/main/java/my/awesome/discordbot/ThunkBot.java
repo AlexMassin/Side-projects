@@ -1,5 +1,6 @@
 package my.awesome.discordbot;
 
+import com.sun.imageio.plugins.gif.GIFImageMetadataFormat;
 import de.btobastian.javacord.DiscordAPI;
 import de.btobastian.javacord.ImplDiscordAPI;
 import de.btobastian.javacord.Javacord;
@@ -12,11 +13,12 @@ import de.btobastian.javacord.entities.message.impl.ImplMessageHistory;
 import de.btobastian.javacord.listener.message.MessageCreateListener;
 import de.btobastian.javacord.listener.message.TypingStartListener;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintStream;
-import java.io.PrintWriter;
+import java.awt.image.BufferedImage;
+import java.io.*;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -29,6 +31,7 @@ public class ThunkBot {
     private static File output = new File("output.txt");
     private static String ownerID = "142404845234683904";
     private static String channelAnnoy;
+    private static int num = 151;
 
 
 
@@ -38,6 +41,7 @@ public class ThunkBot {
         api.connectBlocking();
 
         api.setGame("Type " + prefix + " help for commands");
+
 
 
         api.registerListener(new MessageCreateListener() {
@@ -94,7 +98,12 @@ public class ThunkBot {
                         s = s.replaceAll("[^0-9]+", "");
                         User u = api.getCachedUserById(s);
                         EmbedBuilder e = new EmbedBuilder();
-                        e.setImage(String.valueOf(u.getAvatarUrl()));
+                        String url = String.valueOf(u.getAvatarUrl());
+                        //url = url.replaceAll("media", "cdn");
+                        //url = url.replaceAll(".net", ".com");
+                        //url = url.replaceAll(".jpg", ".gif?size=1024");
+                        e.setImage(url);
+
                         e.setColor(Color.RED);
                         message.reply("", e);
                     }
@@ -105,13 +114,17 @@ public class ThunkBot {
                         annoy = true;
                     }
 
+                    if (message.getContent().startsWith(prefix + "confess") && message.isPrivateMessage()) {
+                        message.reply("Thank you for your confession. This will be under consideration");
+                    }
+
                     if (message.getContent().equalsIgnoreCase(prefix + "annoyOff")) {
                         message.reply("Annoy Mode Off!");
                         annoy = false;
                     }
 
                     if (message.getContent().startsWith(prefix + "say")) {
-                        message.reply(String.valueOf(message.getContent()).substring(5));
+                        message.reply( String.valueOf(message.getContent()).substring(5));
                         message.delete();
 
                     }
@@ -166,7 +179,7 @@ public class ThunkBot {
                         User u = api.getCachedUserById(s);
                         message.reply("I will now annoy " + u.getMentionTag());
                         //u.sendMessage("I have been sent to annoy you :rage:!! Type 'stop' to stop");
-                        for(int i = 50; i >= 0; i--){
+                        for(int i = 999; i >= 0; i--){
                             if(i == 0){
                                 u.sendMessage("You have survived...");
                                 break;
