@@ -88,6 +88,9 @@ public class ThunkBot {
                         e.addField(prefix + "say", "Make the bot do your bidding and say what you want :speak_no_evil:", changeInline);
                         e.addField(prefix + "trim", "Mass deletes messages of the current channel. WIP", changeInline);
                         e.addField(prefix + "whois", "Gives a background check of a specific user", changeInline);
+                        e.addField(prefix + "startCollection", "Starts collecting ", changeInline);
+                        e.addField(prefix + "whois", "Gives a background check of a specific user", changeInline);
+
                         message.reply("", e);
 
 
@@ -99,9 +102,6 @@ public class ThunkBot {
                         User u = api.getCachedUserById(s);
                         EmbedBuilder e = new EmbedBuilder();
                         String url = String.valueOf(u.getAvatarUrl());
-                        //url = url.replaceAll("media", "cdn");
-                        //url = url.replaceAll(".net", ".com");
-                        //url = url.replaceAll(".jpg", ".gif?size=1024");
                         e.setImage(url);
 
                         e.setColor(Color.RED);
@@ -195,7 +195,6 @@ public class ThunkBot {
                     }
 
 
-
                     if(message.isPrivateMessage()){
                         api.getCachedUserById(ownerID).sendMessage(message.toString() + " " + message.getAttachments());
                     }
@@ -236,15 +235,8 @@ public class ThunkBot {
 
         api.registerListener(new TypingStartListener() {
             public void onTypingStart(DiscordAPI discordAPI, User user, Channel channel) {
-                Random rand = new Random();
-
-                String[] s = {"Stop Typing cuck :rage:",
-                        "You're actually a cuck",
-                        "I bet you have 1.66 GPA cuz your liberal brought you down :joy:",
-                        "Take care of your girl before an African does :eggplant: :joy: :cry:"};
-
                 if(annoy && channel.getId().equals(channelAnnoy))
-                    channel.sendMessage(user.getMentionTag() + " " +  s[rand.nextInt(4)]);
+                    channel.sendMessage(user.getMentionTag() + " stop typing! :rage:");
             }
         });
 
