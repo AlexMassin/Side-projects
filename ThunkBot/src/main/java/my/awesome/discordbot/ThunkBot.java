@@ -88,8 +88,9 @@ public class ThunkBot {
                         e.addField(prefix + "say", "Make the bot do your bidding and say what you want :speak_no_evil:", changeInline);
                         e.addField(prefix + "trim", "Mass deletes messages of the current channel. WIP", changeInline);
                         e.addField(prefix + "whois", "Gives a background check of a specific user", changeInline);
-                        e.addField(prefix + "startCollection", "Starts collecting ", changeInline);
-                        e.addField(prefix + "whois", "Gives a background check of a specific user", changeInline);
+                        e.addField(prefix + "startCollection", "Starts collecting messages", changeInline);
+                        e.addField(prefix + "stopCollection", "Stops collecting messages", changeInline);
+                        e.addField(prefix + "curse", "Curse someone :bat:", changeInline);
 
                         message.reply("", e);
 
@@ -103,7 +104,6 @@ public class ThunkBot {
                         EmbedBuilder e = new EmbedBuilder();
                         String url = String.valueOf(u.getAvatarUrl());
                         e.setImage(url);
-
                         e.setColor(Color.RED);
                         message.reply("", e);
                     }
