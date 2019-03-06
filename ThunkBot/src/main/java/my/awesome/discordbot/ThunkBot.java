@@ -1,6 +1,5 @@
 package my.awesome.discordbot;
 
-import com.sun.imageio.plugins.gif.GIFImageMetadataFormat;
 import de.btobastian.javacord.DiscordAPI;
 import de.btobastian.javacord.ImplDiscordAPI;
 import de.btobastian.javacord.Javacord;
@@ -13,12 +12,8 @@ import de.btobastian.javacord.entities.message.impl.ImplMessageHistory;
 import de.btobastian.javacord.listener.message.MessageCreateListener;
 import de.btobastian.javacord.listener.message.TypingStartListener;
 
-import javax.imageio.ImageIO;
 import java.awt.*;
-import java.awt.image.BufferedImage;
 import java.io.*;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -26,12 +21,11 @@ import java.util.*;
 public class ThunkBot {
     private static boolean annoy = false;
     private static String prefix = "-";
-    public static PrintWriter pw;
+    private static PrintWriter pw;
     private static boolean collect = false;
-    private static File output = new File("output.txt");
+    private static final File output = new File("output.txt");
     private static String ownerID = "142404845234683904";
     private static String channelAnnoy;
-    private static int num = 151;
 
 
 
@@ -46,7 +40,7 @@ public class ThunkBot {
 
         api.registerListener(new MessageCreateListener() {
             public void onMessageCreate(DiscordAPI discordAPI, Message message) {
-                if(message.getContent().equalsIgnoreCase(prefix + "startCollection")){
+                if(message.getContent().equalsIgnoreCase(prefix + "startCollection")  && message.getAuthor().getId().equals(ownerID)){
                     try {
                         message.reply("Collecting...");
                         pw = new PrintWriter(output);
@@ -66,12 +60,89 @@ public class ThunkBot {
 
                         message.reply(message.getAuthor().getMentionTag() + " Pong! :ping_pong: " + Long.toString(m1-m2) + "ms");
                     }
+                    String msg = message.getContent().toLowerCase();
+                    msg = msg.replaceAll("[^a-zA-Z0-9 -]", "");
+                    msg = msg.replaceAll(" ", "");
+                    if(msg.contains("incel") || msg.contains("incei") || msg.contains("lncel") || msg.contains("lncei")){
+                        message.delete();
+                    }
+                    /*
+                     if(message.getContent().startsWith(prefix + "plinko")){
+                        Integer numToPlace = Integer.valueOf(message.getContent().substring(prefix.length() + 6).trim());
+                        Random rand = new Random();
+                        String[] prizes = {"100", "0", "5", "100", "5", "0", "100"};
+                        message.reply("Beginning Plinko: Dropping coin at the number " + numToPlace +" slot!");
+                        String result = "|     0     |     1     |     2     |     3     |     4     |     5     |     6     |\n";
+                        for(int i = 0; i < 10; i++){
 
-                    if (message.getContent().startsWith(prefix + "prefix")) {
+                            for(int j = 0; j < 6; j++){
+                                if(j != numToPlace){
+                                    result += "|             ";
+                                } else {
+                                    result += "|     ©     ";
+                                }
+                            }
+
+
+                            int direction = rand.nextInt(2);
+                            if(numToPlace == 6){
+                                direction = 0;
+                            }
+                            if(numToPlace == 0){
+                                direction = 1;
+                            }
+                            if(direction == 0){
+                                numToPlace -= 1;
+                            } else if(direction == 1){
+                                numToPlace += 1;
+                            }
+
+                            result += "|\n";
+                        }
+                        result += "|   100   |   -0-   |   -5-   |   100   |   -5-   |   -0-   |   100   |\nCongrats, your coin fell into slot " + numToPlace +". You have won: " + prizes[numToPlace];
+                        message.reply(result);
+
+
+                    }
+                    */
+
+                    if(message.getContent().equalsIgnoreCase(prefix +"bars")){
+                        ArrayList<String> bars = new ArrayList<String>();
+                        ArrayList<String> emojis = new ArrayList<String>();
+
+                        Random rand = new Random();
+                        File f = new File("lilwayne.txt");
+                        File f1 = new File("emoji.txt");
+                        Scanner in = null;
+                        try {
+                            in = new Scanner(f);
+                        } catch (FileNotFoundException e) {
+                            e.printStackTrace();
+                        }
+
+                        while(in.hasNextLine()){
+                            bars.add(in.nextLine());
+                        }
+
+                        try {
+                            in = new Scanner(f1);
+                        } catch (FileNotFoundException e) {
+                            e.printStackTrace();
+                        }
+
+                        while(in.hasNextLine()){
+                            emojis.add(in.nextLine());
+                        }
+
+                        message.reply(bars.get(rand.nextInt(bars.size())) + " " + emojis.get(rand.nextInt(emojis.size())) + emojis.get(rand.nextInt(emojis.size())));
+
+                    }
+
+                    if (message.getContent().startsWith(prefix + "prefix") && message.getAuthor().getId().equals(ownerID)) {
                         String newPrefix = message.getContent().substring(prefix.length() + 6);
                         message.reply("Prefix has been changed from " + prefix + " to " + newPrefix);
                         prefix = newPrefix.trim();
-                        api.setGame("Type " + prefix + " help for commands");
+                        api.setGame("Type " + prefix + "help for commands");
 
                     }
 
@@ -97,6 +168,19 @@ public class ThunkBot {
 
                     }
 
+
+                    if(message.getContent().equalsIgnoreCase(prefix + "happybday")){
+                        User u = api.getCachedUserById("124695731729596418");
+                        for(int i = 0; i < 300; i++){
+                            message.reply(u.getMentionTag() + " happy birthday dude!");
+                            try {
+                                Thread.sleep(1000);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }
+
                     if (message.getContent().startsWith(prefix + "avatar")) {
                         String s = String.valueOf(message.getContent());
                         s = s.replaceAll("[^0-9]+", "");
@@ -108,7 +192,7 @@ public class ThunkBot {
                         message.reply("", e);
                     }
 
-                    if (message.getContent().equalsIgnoreCase(prefix + "annoyOn")) {
+                    if (message.getContent().equalsIgnoreCase(prefix + "annoyOn") && message.getAuthor().getId().equals(ownerID)) {
                         message.reply("Annoy Mode On!");
                         channelAnnoy = message.getChannelReceiver().getId();
                         annoy = true;
@@ -118,7 +202,7 @@ public class ThunkBot {
                         message.reply("Thank you for your confession. This will be under consideration");
                     }
 
-                    if (message.getContent().equalsIgnoreCase(prefix + "annoyOff")) {
+                    if (message.getContent().equalsIgnoreCase(prefix + "annoyOff")  && message.getAuthor().getId().equals(ownerID)) {
                         message.reply("Annoy Mode Off!");
                         annoy = false;
                     }
@@ -128,7 +212,7 @@ public class ThunkBot {
                         message.delete();
 
                     }
-                    if (message.getContent().startsWith(prefix + "trim")) {
+                    if (message.getContent().startsWith(prefix + "trim")  && message.getAuthor().getId().equals(ownerID)) {
                         String s = String.valueOf(message.getContent());
                         s = s.replaceAll("[^0-9]+", "");
                         int trimInt = Integer.parseInt(s);
@@ -154,11 +238,13 @@ public class ThunkBot {
                             }
                         }
 
-
                     }
 
 
-                    if(message.getContent().equals(prefix + "stopCollection")){
+
+
+
+                    if(message.getContent().equals(prefix + "stopCollection")  && message.getAuthor().getId().equals(ownerID)){
                         message.reply("Stopping Collection...");
                         pw.close();
                         try {
@@ -173,23 +259,25 @@ public class ThunkBot {
 
                     }
 
-                    if(message.getContent().startsWith(prefix + "curse")){
+                    if(message.getContent().startsWith(prefix + "curse") && message.getAuthor().getId().equals(ownerID)){
                         String s = String.valueOf(message.getContent());
                         s = s.replaceAll("[^0-9]+", "");
                         User u = api.getCachedUserById(s);
                         message.reply("I will now annoy " + u.getMentionTag());
                         //u.sendMessage("I have been sent to annoy you :rage:!! Type 'stop' to stop");
-                        for(int i = 999; i >= 0; i--){
+                        for(int i = 10; i >= 0; i--){
                             if(i == 0){
                                 u.sendMessage("You have survived...");
                                 break;
                             }
                             u.sendMessage("I have been sent to annoy you :rage:...you have " + i + " more messages in queue");
+
                             try {
                                 Thread.sleep(1000);
                             } catch (InterruptedException e) {
                                 e.printStackTrace();
                             }
+
                         }
 
                     }
