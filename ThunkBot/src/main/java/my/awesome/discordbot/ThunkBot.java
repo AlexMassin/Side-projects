@@ -162,23 +162,11 @@ public class ThunkBot {
                         e.addField(prefix + "startCollection", "Starts collecting messages", changeInline);
                         e.addField(prefix + "stopCollection", "Stops collecting messages", changeInline);
                         e.addField(prefix + "curse", "Curse someone :bat:", changeInline);
+                        e.addField(prefix + "bars", "Show some sick bars at random", changeInline);
 
                         message.reply("", e);
 
 
-                    }
-
-
-                    if(message.getContent().equalsIgnoreCase(prefix + "happybday")){
-                        User u = api.getCachedUserById("124695731729596418");
-                        for(int i = 0; i < 300; i++){
-                            message.reply(u.getMentionTag() + " happy birthday dude!");
-                            try {
-                                Thread.sleep(1000);
-                            } catch (InterruptedException e) {
-                                e.printStackTrace();
-                            }
-                        }
                     }
 
                     if (message.getContent().startsWith(prefix + "avatar")) {
@@ -198,9 +186,6 @@ public class ThunkBot {
                         annoy = true;
                     }
 
-                    if (message.getContent().startsWith(prefix + "confess") && message.isPrivateMessage()) {
-                        message.reply("Thank you for your confession. This will be under consideration");
-                    }
 
                     if (message.getContent().equalsIgnoreCase(prefix + "annoyOff")  && message.getAuthor().getId().equals(ownerID)) {
                         message.reply("Annoy Mode Off!");
@@ -239,10 +224,6 @@ public class ThunkBot {
                         }
 
                     }
-
-
-
-
 
                     if(message.getContent().equals(prefix + "stopCollection")  && message.getAuthor().getId().equals(ownerID)){
                         message.reply("Stopping Collection...");
