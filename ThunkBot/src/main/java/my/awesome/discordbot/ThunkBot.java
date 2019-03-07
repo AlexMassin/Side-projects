@@ -13,7 +13,9 @@ import de.btobastian.javacord.listener.message.MessageCreateListener;
 import de.btobastian.javacord.listener.message.TypingStartListener;
 
 import java.awt.*;
-import java.io.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -273,7 +275,6 @@ public class ThunkBot {
                         String s = String.valueOf(message.getContent());
                         s = s.replaceAll("[^0-9]+", "");
                         User u = api.getCachedUserById(s);
-
                         EmbedBuilder e = new EmbedBuilder();
                         SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd\nHH:mm:ss");
                         format1.setTimeZone(TimeZone.getTimeZone("EST"));
@@ -283,19 +284,24 @@ public class ThunkBot {
 
                         String nickname = u.getNickname(api.getServerById(c.getServer().getId()));
                         if (nickname == null) {
-                            e.addField("Nickname:  ", "N/A", true);
+                            e.addField("Nickname:  ", "N/A", false);
                         } else {
                             e.setTitle("Who is " + nickname + "?");
-                            e.addField("Name: ", u.getName(), true);
+                            e.addField("Name: ", u.getName(), false);
 
                         }
-                        e.addField("Discriminator: ", "#" + u.getDiscriminator(), true);
-                        e.addField("Creation Date: ", format1.format(u.getCreationDate().getTime()) + " EST ", true);
-                        e.addField("ID: ", u.getId(), true);
-                        e.addField("Playing: ", u.getGame(), true);
+                        e.addField("Discriminator: ", "#" + u.getDiscriminator(), false);
+                        e.addField("Creation Date: ", format1.format(u.getCreationDate().getTime()) + " EST ", false);
+                        e.addField("ID: ", u.getId(), false);
+                        if(u.getGame() == null){
+                            e.addField("Playing: ", "None", false);
+                        } else {
+                            e.addField("Playing: ", u.getGame(), false);
+                        }
                         e.setThumbnail(String.valueOf(u.getAvatarUrl()));
-
                         message.reply("", e);
+
+
                     }
 
                 }
